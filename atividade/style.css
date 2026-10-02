@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  max-width: 400px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+/* Abas */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  background: #e6eef7;
+  color: #555;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab:hover {
+  background: #cfe3f7;
+}
+
+.tab.ativa {
+  background: #4facfe;
+  color: white;
+}
+
+/* Campos */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #4facfe;
+  outline: none;
+}
+
+input.erro {
+  border: 2px solid red;
+}
+
+input.sucesso {
+  border: 2px solid green;
+}
+
+/* Botão principal com efeito hover */
+.btn-principal {
+  width: 100%;
+  padding: 12px;
+  background: #4facfe;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-principal:hover {
+  background: #007bff;
+  transform: scale(1.03);
+}
+
+/* Mensagens de feedback */
+.mensagem {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  min-height: 22px;
+}
+
+.oculto {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+}

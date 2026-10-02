@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clube de Leitura - Cadastro e Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>📚 Clube de Leitura</h1>
+      <p class="subtitle">Cadastro e Login de Usuários</p>
+
+      <!-- Abas -->
+      <div class="tabs">
+        <button type="button" class="tab ativa" id="tabCadastro" onclick="mostrarForm('cadastro')">Cadastro</button>
+        <button type="button" class="tab" id="tabLogin" onclick="mostrarForm('login')">Login</button>
+      </div>
+
+      <!-- FORMULÁRIO DE CADASTRO -->
+      <form id="formCadastro" onsubmit="return false;">
+        <div class="input-group">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" placeholder="Digite seu nome">
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="exemplo@email.com">
+        </div>
+
+        <div class="input-group">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" placeholder="Mínimo 6 caracteres e 1 número">
+        </div>
+
+        <div class="input-group">
+          <label for="confirmar">Confirmar senha</label>
+          <input type="password" id="confirmar" placeholder="Repita a senha">
+        </div>
+
+        <button type="button" class="btn-principal" onclick="cadastrar()">Cadastrar</button>
+        <p class="mensagem" id="mensagemCadastro"></p>
+      </form>
+
+      <!-- FORMULÁRIO DE LOGIN -->
+      <form id="formLogin" class="oculto" onsubmit="return false;">
+        <div class="input-group">
+          <label for="loginEmail">Email</label>
+          <input type="text" id="loginEmail" placeholder="Digite seu email">
+        </div>
+
+        <div class="input-group">
+          <label for="loginSenha">Senha</label>
+          <input type="password" id="loginSenha" placeholder="Digite sua senha">
+        </div>
+
+        <button type="button" class="btn-principal" onclick="login()">Entrar</button>
+        <p class="mensagem" id="mensagemLogin"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
